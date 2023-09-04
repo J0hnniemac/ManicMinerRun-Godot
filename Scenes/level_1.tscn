@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bnn3gb1xdgugr"]
+[gd_scene load_steps=8 format=3 uid="uid://bnn3gb1xdgugr"]
 
 [ext_resource type="Texture2D" uid="uid://cpev0jhbj8jw8" path="res://Assets/Sprites/mmr.png" id="1_8uv4y"]
 [ext_resource type="PackedScene" uid="uid://wx8t0l8qnlia" path="res://Scenes/baddie_1.tscn" id="2_tr7h3"]
+[ext_resource type="PackedScene" uid="uid://d1ajbv673lerv" path="res://Scenes/baddie_2.tscn" id="3_qdes2"]
+[ext_resource type="PackedScene" uid="uid://ca2m2xemnl1qw" path="res://Scenes/collect_1.tscn" id="4_g0xt0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pcqck"]
 texture = ExtResource("1_8uv4y")
@@ -492,694 +494,710 @@ sources/0 = SubResource("TileSetAtlasSource_pcqck")
 sources/1 = SubResource("TileSetAtlasSource_bktps")
 
 [node name="Level1" type="TileMap"]
-position = Vector2(370, 77)
+position = Vector2(340, 70)
 scale = Vector2(0.25, 0.25)
 tile_set = SubResource("TileSet_rl7id")
 format = 2
-layer_0/tile_data = PackedInt32Array(0, 131072, 0, 65536, 131072, 0, 131072, 131072, 0, 196608, 131072, 0, 262144, 131072, 0, 327680, 131072, 0, 393216, 131072, 0, 458752, 131072, 0, 524288, 131072, 0, 589824, 131072, 0, 655360, 131072, 0, 720896, 131072, 0, 786432, 131072, 0, 851968, 131072, 0, 917504, 131072, 0, 983040, 131072, 0, 1048576, 131072, 0, 1114112, 131072, 0, 1179648, 131072, 0, 1245184, 131072, 0, 1, 131072, 0, 2, 131072, 0, 3, 131072, 0, 4, 131072, 0, 5, 131072, 0, 6, 131072, 0, 7, 131072, 0, 8, 131072, 0, 9, 131072, 0, 10, 131072, 0, 11, 131072, 0, 12, 131072, 0, 13, 131072, 0, 14, 131072, 0, 15, 131072, 0, 16, 131072, 0, 17, 131072, 0, 18, 131072, 0, 19, 131072, 0, 20, 131072, 0, 21, 131072, 0, 22, 131072, 0, 23, 131072, 0, 24, 131072, 0, 25, 131072, 0, 26, 131072, 0, 27, 131072, 0, 28, 131072, 0, 29, 131072, 0, 30, 131072, 0, 31, 131072, 0, 32, 131072, 0, 33, 131072, 0, 34, 131072, 0, 35, 131072, 0, 36, 131072, 0, 37, 131072, 0, 38, 131072, 0, 39, 131072, 0, 40, 131072, 0, 41, 131072, 0, 42, 131072, 0, 43, 131072, 0, 44, 131072, 0, 45, 131072, 0, 46, 131072, 0, 47, 131072, 0, 48, 131072, 0, 49, 131072, 0, 50, 131072, 0, 51, 131072, 0, 52, 131072, 0, 53, 131072, 0, 54, 131072, 0, 55, 131072, 0, 56, 131072, 0, 57, 131072, 0, 58, 131072, 0, 59, 131072, 0, 60, 131072, 0, 61, 131072, 0, 62, 131072, 0, 63, 131072, 0, 64, 131072, 0, 65, 131072, 0, 66, 131072, 0, 67, 131072, 0, 68, 131072, 0, 69, 131072, 0, 70, 131072, 0, 71, 131072, 0, 72, 131072, 0, 73, 131072, 0, 74, 131072, 0, 75, 131072, 0, 76, 131072, 0, 77, 131072, 0, 78, 131072, 0, 79, 131072, 0, 80, 131072, 0, 81, 131072, 0, 82, 131072, 0, 83, 131072, 0, 84, 131072, 0, 85, 131072, 0, 86, 131072, 0, 87, 131072, 0, 88, 131072, 0, 89, 131072, 0, 90, 131072, 0, 91, 131072, 0, 92, 131072, 0, 93, 131072, 0, 94, 131072, 0, 95, 131072, 0, 96, 131072, 0, 97, 131072, 0, 98, 131072, 0, 99, 131072, 0, 100, 131072, 0, 101, 131072, 0, 102, 131072, 0, 103, 131072, 0, 104, 131072, 0, 105, 131072, 0, 106, 131072, 0, 107, 131072, 0, 108, 131072, 0, 109, 131072, 0, 110, 131072, 0, 111, 131072, 0, 112, 131072, 0, 113, 131072, 0, 114, 131072, 0, 115, 131072, 0, 116, 131072, 0, 117, 131072, 0, 118, 131072, 0, 119, 131072, 0, 120, 131072, 0, 121, 131072, 0, 122, 131072, 0, 123, 131072, 0, 124, 131072, 0, 125, 131072, 0, 126, 131072, 0, 127, 131072, 0, 128, 131072, 0, 129, 131072, 0, 130, 131072, 0, 131, 131072, 0, 132, 131072, 0, 133, 131072, 0, 134, 131072, 0, 135, 131072, 0, 136, 131072, 0, 137, 131072, 0, 138, 131072, 0, 139, 131072, 0, 140, 131072, 0, 141, 131072, 0, 142, 131072, 0, 143, 131072, 0, 144, 131072, 0, 145, 131072, 0, 146, 131072, 0, 147, 131072, 0, 148, 131072, 0, 149, 131072, 0, 150, 131072, 0, 151, 131072, 0, 152, 131072, 0, 153, 131072, 0, 154, 131072, 0, 155, 131072, 0, 156, 131072, 0, 157, 131072, 0, 158, 131072, 0, 1048577, 0, 0, 1048578, 0, 0, 1048579, 0, 0, 1048580, 0, 0, 917509, 0, 0, 917510, 0, 0, 917511, 0, 0, 917512, 0, 0, 917513, 0, 0, 917514, 0, 0, 917515, 0, 0, 917516, 0, 0, 917517, 0, 0, 917518, 0, 0, 917519, 0, 0, 917520, 0, 0, 917521, 0, 0, 917522, 0, 0, 917523, 0, 0, 917524, 0, 0, 917525, 0, 0, 917526, 0, 0, 917527, 0, 0, 917528, 0, 0, 917529, 0, 0, 917530, 0, 0, 917531, 0, 0, 851996, 131072, 0, 851997, 131072, 0, 851998, 131072, 0, 851999, 131072, 0, 852000, 0, 2, 852001, 0, 2, 852002, 0, 2, 852003, 0, 2, 852004, 0, 2, 852005, 0, 2, 852006, 0, 0, 852007, 0, 0, 852008, 0, 0, 720937, 0, 0, 720938, 0, 0, 655404, 0, 3, 655405, 0, 3, 655406, 0, 3, 655407, 0, 3, 655408, 0, 3, 655409, 0, 3, 655410, 0, 3, 655411, 0, 3, 655412, 0, 3, 655413, 0, 3, 655414, 0, 3, 655415, 0, 3, 655416, 0, 3, 655417, 0, 3, 655418, 0, 3, 655419, 0, 3, 655420, 0, 3, 655421, 0, 3, 655422, 0, 3, 655423, 0, 3, 655424, 0, 3, 655425, 0, 3, 655426, 0, 3, 655427, 0, 3, 655428, 0, 3, 655429, 0, 3, 655430, 0, 3, 655431, 0, 3, 655432, 0, 3, 655433, 0, 3, 589873, 131072, 0, 589874, 131072, 0, 589875, 131072, 0, 589876, 131072, 0, 589877, 131072, 0, 655436, 0, 0, 655437, 0, 0, 655438, 0, 0, 655439, 0, 0, 655440, 0, 0, 524368, 0, 0, 524369, 0, 0, 524370, 0, 0, 524371, 0, 0, 524372, 0, 0, 393296, 0, 0, 393297, 0, 0, 393298, 0, 0, 393299, 0, 0, 393300, 0, 0, 393301, 0, 0, 393302, 0, 0, 393303, 0, 0, 393304, 0, 0, 393305, 0, 0, 393306, 0, 0, 393307, 0, 0, 393308, 0, 0, 393309, 0, 0, 393310, 0, 0, 393311, 0, 0, 393312, 0, 0, 393313, 0, 0, 393314, 0, 0, 393315, 0, 0, 393316, 0, 2, 393317, 0, 2, 393318, 0, 2, 393319, 0, 2, 393320, 0, 0, 393321, 0, 2, 393322, 0, 2, 393323, 0, 2, 393324, 0, 2, 393325, 0, 2, 393326, 0, 0, 393327, 0, 0, 393328, 0, 0, 393329, 0, 0, 393330, 0, 0, 393331, 0, 0, 393332, 0, 0, 393333, 0, 0, 393334, 0, 0, 393335, 0, 0, 393336, 0, 0, 393337, 0, 0, 393338, 0, 0, 393339, 0, 0, 393340, 0, 0, 393341, 0, 0, 131165, 196608, 0, 131174, 196608, 0, 131164, 262144, 0, 196710, 262144, 0, 327791, 262144, 0, 524414, 0, 0, 524415, 0, 0, 524416, 0, 0, 655489, 0, 0, 655490, 0, 0, 655491, 0, 0, 655492, 0, 0, 655495, 0, 3, 655496, 0, 3, 655497, 0, 3, 655498, 0, 3, 655499, 0, 3, 655500, 0, 3, 655501, 0, 3, 655502, 0, 3, 655503, 0, 3, 655504, 0, 3, 655505, 0, 3, 655506, 0, 3, 655507, 0, 3, 655508, 0, 3, 655509, 0, 3, 589964, 131072, 0, 589965, 131072, 0, 589966, 131072, 0, 1048725, 0, 0, 1048726, 0, 0, 1048727, 0, 0, 1048728, 0, 0, 1048729, 0, 0, 1048730, 0, 0, 1048731, 0, 0, 1048732, 0, 0, 1048733, 0, 0, 1048734, 0, 0, 1048735, 131072, 0, 917654, 0, 4, 983190, 0, 5, 917655, 65536, 4, 983191, 65536, 5, 983199, 131072, 0, 1179807, 131072, 0, 1114271, 131072, 0, 917663, 131072, 0, 852127, 131072, 0, 786591, 131072, 0, 721055, 131072, 0, 655519, 131072, 0, 589983, 131072, 0, 524447, 131072, 0, 458911, 131072, 0, 393375, 131072, 0, 327839, 131072, 0, 262303, 131072, 0, 196767, 131072, 0, 131231, 131072, 0, 65695, 131072, 0, 159, 131072, 0)
+layer_0/tile_data = PackedInt32Array(0, 131072, 0, 65536, 131072, 0, 131072, 131072, 0, 196608, 131072, 0, 262144, 131072, 0, 327680, 131072, 0, 393216, 131072, 0, 458752, 131072, 0, 524288, 131072, 0, 589824, 131072, 0, 655360, 131072, 0, 720896, 131072, 0, 786432, 131072, 0, 851968, 131072, 0, 917504, 131072, 0, 983040, 131072, 0, 1048576, 131072, 0, 1114112, 131072, 0, 1179648, 131072, 0, 1245184, 131072, 0, 1, 131072, 0, 2, 131072, 0, 3, 131072, 0, 4, 131072, 0, 5, 131072, 0, 6, 131072, 0, 7, 131072, 0, 8, 131072, 0, 9, 131072, 0, 10, 131072, 0, 11, 131072, 0, 12, 131072, 0, 13, 131072, 0, 14, 131072, 0, 15, 131072, 0, 16, 131072, 0, 17, 131072, 0, 18, 131072, 0, 19, 131072, 0, 20, 131072, 0, 21, 131072, 0, 22, 131072, 0, 23, 131072, 0, 24, 131072, 0, 25, 131072, 0, 26, 131072, 0, 27, 131072, 0, 28, 131072, 0, 29, 131072, 0, 30, 131072, 0, 31, 131072, 0, 32, 131072, 0, 33, 131072, 0, 34, 131072, 0, 35, 131072, 0, 36, 131072, 0, 37, 131072, 0, 38, 131072, 0, 39, 131072, 0, 40, 131072, 0, 41, 131072, 0, 42, 131072, 0, 43, 131072, 0, 44, 131072, 0, 45, 131072, 0, 46, 131072, 0, 47, 131072, 0, 48, 131072, 0, 49, 131072, 0, 50, 131072, 0, 51, 131072, 0, 52, 131072, 0, 53, 131072, 0, 54, 131072, 0, 55, 131072, 0, 56, 131072, 0, 57, 131072, 0, 58, 131072, 0, 59, 131072, 0, 60, 131072, 0, 61, 131072, 0, 62, 131072, 0, 63, 131072, 0, 64, 131072, 0, 65, 131072, 0, 66, 131072, 0, 67, 131072, 0, 68, 131072, 0, 69, 131072, 0, 70, 131072, 0, 71, 131072, 0, 72, 131072, 0, 73, 131072, 0, 74, 131072, 0, 75, 131072, 0, 76, 131072, 0, 77, 131072, 0, 78, 131072, 0, 79, 131072, 0, 80, 131072, 0, 81, 131072, 0, 82, 131072, 0, 83, 131072, 0, 84, 131072, 0, 85, 131072, 0, 86, 131072, 0, 87, 131072, 0, 88, 131072, 0, 89, 131072, 0, 90, 131072, 0, 91, 131072, 0, 92, 131072, 0, 93, 131072, 0, 94, 131072, 0, 95, 131072, 0, 96, 131072, 0, 97, 131072, 0, 98, 131072, 0, 99, 131072, 0, 100, 131072, 0, 101, 131072, 0, 102, 131072, 0, 103, 131072, 0, 104, 131072, 0, 105, 131072, 0, 106, 131072, 0, 107, 131072, 0, 108, 131072, 0, 109, 131072, 0, 110, 131072, 0, 111, 131072, 0, 112, 131072, 0, 113, 131072, 0, 114, 131072, 0, 115, 131072, 0, 116, 131072, 0, 117, 131072, 0, 118, 131072, 0, 119, 131072, 0, 120, 131072, 0, 121, 131072, 0, 122, 131072, 0, 123, 131072, 0, 124, 131072, 0, 125, 131072, 0, 126, 131072, 0, 127, 131072, 0, 128, 131072, 0, 129, 131072, 0, 130, 131072, 0, 131, 131072, 0, 132, 131072, 0, 133, 131072, 0, 134, 131072, 0, 135, 131072, 0, 136, 131072, 0, 137, 131072, 0, 138, 131072, 0, 139, 131072, 0, 140, 131072, 0, 141, 131072, 0, 142, 131072, 0, 143, 131072, 0, 144, 131072, 0, 145, 131072, 0, 146, 131072, 0, 147, 131072, 0, 148, 131072, 0, 149, 131072, 0, 150, 131072, 0, 151, 131072, 0, 152, 131072, 0, 153, 131072, 0, 154, 131072, 0, 155, 131072, 0, 156, 131072, 0, 157, 131072, 0, 158, 131072, 0, 1048577, 0, 0, 1048578, 0, 0, 1048579, 0, 0, 1048580, 0, 0, 917509, 0, 0, 917510, 0, 0, 917511, 0, 0, 917512, 0, 0, 917513, 0, 0, 917514, 0, 0, 917515, 0, 0, 917516, 0, 0, 917517, 0, 0, 917518, 0, 0, 917519, 0, 0, 917520, 0, 0, 917521, 0, 0, 917522, 0, 0, 917523, 0, 0, 917524, 0, 0, 917525, 0, 0, 917526, 0, 0, 917527, 0, 0, 917528, 0, 0, 917529, 0, 0, 917530, 0, 0, 917531, 0, 0, 851996, 131072, 0, 851997, 131072, 0, 851998, 131072, 0, 851999, 131072, 0, 852000, 0, 2, 852001, 0, 2, 852002, 0, 2, 852003, 0, 2, 852004, 0, 2, 852005, 0, 2, 852006, 0, 0, 852007, 0, 0, 852008, 0, 0, 720937, 0, 0, 720938, 0, 0, 655404, 0, 3, 655405, 0, 3, 655406, 0, 3, 655407, 0, 3, 655408, 0, 3, 655409, 0, 3, 655410, 0, 3, 655411, 0, 3, 655412, 0, 3, 655413, 0, 3, 655414, 0, 3, 655415, 0, 3, 655416, 0, 3, 655417, 0, 3, 655418, 0, 3, 655419, 0, 3, 655420, 0, 3, 655421, 0, 3, 655422, 0, 3, 655423, 0, 3, 655424, 0, 3, 655425, 0, 3, 655426, 0, 3, 655427, 0, 3, 655428, 0, 3, 655429, 0, 3, 655430, 0, 3, 655431, 0, 3, 655432, 0, 3, 655433, 0, 3, 589873, 131072, 0, 589874, 131072, 0, 589875, 131072, 0, 589876, 131072, 0, 589877, 131072, 0, 655436, 0, 0, 655437, 0, 0, 655438, 0, 0, 655439, 0, 0, 655440, 0, 0, 524368, 0, 0, 524369, 0, 0, 524370, 0, 0, 524371, 0, 0, 524372, 0, 0, 393296, 0, 0, 393297, 0, 0, 393298, 0, 0, 393299, 0, 0, 393300, 0, 0, 393301, 0, 0, 393302, 0, 0, 393303, 0, 0, 393304, 0, 0, 393305, 0, 0, 393306, 0, 0, 393307, 0, 0, 393308, 0, 0, 393309, 0, 0, 393310, 0, 0, 393311, 0, 0, 393312, 0, 0, 393313, 0, 0, 393314, 0, 0, 393315, 0, 0, 393316, 0, 2, 393317, 0, 2, 393318, 0, 2, 393319, 0, 2, 393320, 0, 0, 393321, 0, 2, 393322, 0, 2, 393323, 0, 2, 393324, 0, 2, 393325, 0, 2, 393326, 0, 0, 393327, 0, 0, 393328, 0, 0, 393329, 0, 0, 393330, 0, 0, 393331, 0, 0, 393332, 0, 0, 393333, 0, 0, 393334, 0, 0, 393335, 0, 0, 393336, 0, 0, 393337, 0, 0, 393338, 0, 0, 393339, 0, 0, 393340, 0, 0, 393341, 0, 0, 524414, 0, 0, 524415, 0, 0, 524416, 0, 0, 655489, 0, 0, 655490, 0, 0, 655491, 0, 0, 655492, 0, 0, 655495, 0, 3, 655496, 0, 3, 655497, 0, 3, 655498, 0, 3, 655499, 0, 3, 655500, 0, 3, 655501, 0, 3, 655502, 0, 3, 655503, 0, 3, 655504, 0, 3, 655505, 0, 3, 655506, 0, 3, 655507, 0, 3, 655508, 0, 3, 655509, 0, 3, 589964, 131072, 0, 589965, 131072, 0, 589966, 131072, 0, 1048725, 0, 0, 1048726, 0, 0, 1048727, 0, 0, 1048728, 0, 0, 1048729, 0, 0, 1048730, 0, 0, 1048731, 0, 0, 1048732, 0, 0, 1048733, 0, 0, 1048734, 0, 0, 1048735, 131072, 0, 917654, 0, 4, 983190, 0, 5, 917655, 65536, 4, 983191, 65536, 5, 983199, 131072, 0, 1179807, 131072, 0, 1114271, 131072, 0, 917663, 131072, 0, 852127, 131072, 0, 786591, 131072, 0, 721055, 131072, 0, 655519, 131072, 0, 589983, 131072, 0, 524447, 131072, 0, 458911, 131072, 0, 393375, 131072, 0, 327839, 131072, 0, 262303, 131072, 0, 196767, 131072, 0, 131231, 131072, 0, 65695, 131072, 0, 159, 131072, 0)
 
-[node name="Baddies" type="Node" parent="."]
+[node name="Baddies1" type="Node" parent="."]
 
-[node name="Baddie1" parent="Baddies" instance=ExtResource("2_tr7h3")]
-position = Vector2(827, 509)
+[node name="Baddie1" parent="Baddies1" instance=ExtResource("2_tr7h3")]
+position = Vector2(836, 502)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie2" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie2" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(418, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie3" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie3" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(450, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie4" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie4" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(482, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie5" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie5" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(514, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie6" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie6" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(546, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie7" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie7" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(578, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie8" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie8" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(610, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie9" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie9" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(642, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie10" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie10" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(674, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie11" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie11" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(706, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie12" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie12" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(738, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie13" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie13" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(770, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie14" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie14" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(802, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie15" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie15" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(834, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie16" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie16" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(866, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie17" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie17" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(898, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie18" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie18" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(930, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie19" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie19" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(962, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie20" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie20" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(994, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie21" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie21" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1026, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie22" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie22" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1058, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie23" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie23" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1090, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie24" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie24" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1122, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie25" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie25" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1154, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie26" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie26" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1186, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie27" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie27" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1218, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie28" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie28" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1250, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie29" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie29" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1282, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie30" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie30" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1314, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie31" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie31" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1346, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie32" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie32" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1378, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie33" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie33" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1410, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie34" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie34" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1442, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie35" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie35" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1474, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie36" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie36" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1506, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie37" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie37" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1538, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie38" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie38" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1570, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie39" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie39" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1602, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie40" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie40" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1634, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie41" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie41" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1666, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie42" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie42" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1698, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie43" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie43" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1730, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie44" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie44" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1762, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie45" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie45" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1794, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie46" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie46" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1826, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie47" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie47" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1858, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie48" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie48" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1890, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie49" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie49" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1922, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie50" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie50" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1954, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie51" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie51" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1986, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie52" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie52" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2018, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie53" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie53" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2050, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie54" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie54" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2082, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie55" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie55" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2114, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie56" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie56" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2146, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie57" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie57" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2178, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie58" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie58" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2210, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie59" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie59" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2242, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie60" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie60" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2274, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie61" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie61" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2306, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie62" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie62" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2338, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie63" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie63" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2370, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie64" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie64" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2402, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie65" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie65" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2434, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie66" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie66" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2466, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie67" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie67" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2498, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie68" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie68" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2530, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie69" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie69" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2562, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie70" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie70" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2594, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie71" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie71" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2626, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie72" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie72" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2658, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie73" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie73" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2690, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie74" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie74" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2722, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie75" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie75" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2754, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie76" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie76" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2786, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie77" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie77" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2818, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie78" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie78" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2850, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie79" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie79" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2882, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie80" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie80" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2914, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie81" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie81" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2946, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie82" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie82" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(2978, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie83" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie83" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3010, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie84" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie84" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3042, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie85" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie85" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3074, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie86" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie86" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3106, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie87" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie87" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3138, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie88" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie88" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3170, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie89" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie89" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3202, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie90" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie90" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3234, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie91" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie91" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3266, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie92" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie92" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3298, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie93" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie93" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3330, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie94" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie94" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3362, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie95" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie95" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3394, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie96" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie96" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3426, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie97" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie97" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3458, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie98" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie98" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3490, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie99" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie99" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3522, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie100" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie100" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3554, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie101" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie101" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3586, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie102" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie102" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3618, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie103" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie103" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3650, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie104" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie104" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3682, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie105" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie105" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3714, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie106" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie106" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3746, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie107" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie107" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3778, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie108" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie108" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3810, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie109" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie109" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3842, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie110" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie110" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3874, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie111" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie111" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3906, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie112" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie112" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3938, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie113" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie113" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(3970, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie114" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie114" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4002, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie115" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie115" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4034, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie116" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie116" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4066, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie117" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie117" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4098, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie118" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie118" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4130, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie119" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie119" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4162, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie120" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie120" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4194, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie121" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie121" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4226, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie122" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie122" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4258, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie123" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie123" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4290, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie124" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie124" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4322, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie125" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie125" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4354, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie126" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie126" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4386, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie127" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie127" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4418, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie128" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie128" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4450, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie129" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie129" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4482, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie130" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie130" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4514, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie131" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie131" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4546, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie132" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie132" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4578, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie133" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie133" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4610, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie134" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie134" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4642, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie135" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie135" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4674, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie136" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie136" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4706, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie137" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie137" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4738, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie138" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie138" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4770, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie139" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie139" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4802, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie140" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie140" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4834, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie141" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie141" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4866, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie142" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie142" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4898, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie143" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie143" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4930, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie144" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie144" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4962, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie145" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie145" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4994, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie146" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie146" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(5026, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie147" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie147" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(5058, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie148" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie148" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(5090, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie149" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie149" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(5122, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie150" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie150" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(5154, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie151" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie151" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(5186, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie152" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie152" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(5218, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie153" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie153" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(5250, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie154" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie154" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(5282, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie155" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie155" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(5314, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie156" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie156" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(5346, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie157" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie157" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(5378, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie158" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie158" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(5410, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie159" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie159" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(5442, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie161" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie161" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(5250, 573)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie162" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie162" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(5282, 573)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie163" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie163" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(5314, 573)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie164" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie164" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(5346, 573)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie165" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie165" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(5378, 573)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie166" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie166" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(5410, 573)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie167" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie167" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(5442, 573)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie160" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie160" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(5474, 701)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie168" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie168" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(4770, 381)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie169" parent="Baddies" instance=ExtResource("2_tr7h3")]
-position = Vector2(3906, 253)
+[node name="Baddie169" parent="Baddies1" instance=ExtResource("2_tr7h3")]
+position = Vector2(3908, 246)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie170" parent="Baddies" instance=ExtResource("2_tr7h3")]
-position = Vector2(4025, 253)
+[node name="Baddie170" parent="Baddies1" instance=ExtResource("2_tr7h3")]
+position = Vector2(4036, 246)
 scale = Vector2(0.25, 0.25)
 
-[node name="Baddie171" parent="Baddies" instance=ExtResource("2_tr7h3")]
+[node name="Baddie171" parent="Baddies1" instance=ExtResource("2_tr7h3")]
 position = Vector2(1890, 381)
 scale = Vector2(0.25, 0.25)
+
+[node name="Baddies2" type="Node" parent="."]
+
+[node name="Baddie2" parent="Baddies2" instance=ExtResource("3_qdes2")]
+position = Vector2(3364, 118)
+scale = Vector2(0.25, 0.25)
+
+[node name="Baddie3" parent="Baddies2" instance=ExtResource("3_qdes2")]
+position = Vector2(3652, 118)
+scale = Vector2(0.25, 0.25)
+
+[node name="Collect1" parent="." instance=ExtResource("4_g0xt0")]
+position = Vector2(11968, 192)
+
+[node name="Collect2" parent="." instance=ExtResource("4_g0xt0")]
+position = Vector2(13248, 320)

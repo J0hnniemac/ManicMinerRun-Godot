@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://0rgj2namgnvk"]
 
-[ext_resource type="Script" path="res://Scenes/Player.gd" id="1_8rv8j"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_8rv8j"]
 [ext_resource type="Texture2D" uid="uid://ckbb0casdx0n6" path="res://Assets/Sprites/willywalk.png" id="1_uvkkr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c40p5"]
@@ -57,7 +57,8 @@ animations = [{
 "speed": 8.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(0.25, 0.25)
 collision_layer = 2
 script = ExtResource("1_8rv8j")
 
