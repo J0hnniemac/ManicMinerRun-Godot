@@ -3,7 +3,7 @@ extends Node2D
 @onready var player_spawn_point = $PlayerSpawnPoint
 @onready var player_scene = preload("res://Scenes/Player.tscn")
 
-@onready var level_container = $Game
+@onready var level_container = $Level1
 
 
 func _ready():

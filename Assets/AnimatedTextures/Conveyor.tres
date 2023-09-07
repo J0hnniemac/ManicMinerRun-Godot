@@ -1,0 +1,17 @@
+[gd_resource type="AnimatedTexture" load_steps=5 format=3 uid="uid://c0atfoy1fg412"]
+
+[ext_resource type="Texture2D" uid="uid://cw2hldwmt6ofm" path="res://Assets/Sprites/Conveyor1.png" id="1_sngay"]
+[ext_resource type="Texture2D" uid="uid://hiinmr44bl35" path="res://Assets/Sprites/Conveyor2.png" id="2_bll5b"]
+[ext_resource type="Texture2D" uid="uid://cg7dpsu26ebuy" path="res://Assets/Sprites/Conveyor3.png" id="3_tcix6"]
+[ext_resource type="Texture2D" uid="uid://dslnx2bth0jbv" path="res://Assets/Sprites/Conveyor4.png" id="4_f4mep"]
+
+[resource]
+frames = 4
+frame_0/texture = ExtResource("1_sngay")
+frame_0/duration = 0.2
+frame_1/texture = ExtResource("2_bll5b")
+frame_1/duration = 0.2
+frame_2/texture = ExtResource("3_tcix6")
+frame_2/duration = 0.2
+frame_3/texture = ExtResource("4_f4mep")
+frame_3/duration = 0.2
