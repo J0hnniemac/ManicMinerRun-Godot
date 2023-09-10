@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://d3xrni43rjfsr"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_l2wvm"]
-[ext_resource type="PackedScene" uid="uid://bnn3gb1xdgugr" path="res://Scenes/level_1.tscn" id="1_lmk8i"]
+[ext_resource type="PackedScene" uid="uid://c8mex3fk5hnh7" path="res://Scenes/level_01.tscn" id="3_ai4fo"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_l2wvm")
@@ -10,10 +10,10 @@ script = ExtResource("1_l2wvm")
 position = Vector2(76, 435)
 scale = Vector2(0.25, 0.25)
 
-[node name="Level1" parent="." instance=ExtResource("1_lmk8i")]
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Level01" parent="." instance=ExtResource("3_ai4fo")]
