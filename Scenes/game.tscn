@@ -1,13 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3xrni43rjfsr"]
+[gd_scene load_steps=4 format=3 uid="uid://d3xrni43rjfsr"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_l2wvm"]
 [ext_resource type="PackedScene" uid="uid://c8mex3fk5hnh7" path="res://Scenes/level_01.tscn" id="3_ai4fo"]
+[ext_resource type="PackedScene" uid="uid://dmu152y70kma7" path="res://Scenes/robot.tscn" id="3_reafa"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_l2wvm")
 
 [node name="PlayerSpawnPoint" type="Marker2D" parent="."]
-position = Vector2(3055, 111)
+position = Vector2(1533, 211)
 scale = Vector2(0.25, 0.25)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -17,3 +18,11 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Level01" parent="." instance=ExtResource("3_ai4fo")]
+
+[node name="Robot" parent="." instance=ExtResource("3_reafa")]
+position = Vector2(3282, 159)
+direction = -1
+move_distance = 320
+
+[node name="Robot2" parent="." instance=ExtResource("3_reafa")]
+position = Vector2(1653, 352)

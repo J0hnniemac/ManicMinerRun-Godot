@@ -1,0 +1,30 @@
+[gd_scene load_steps=8 format=3 uid="uid://dmu152y70kma7"]
+
+[ext_resource type="Script" path="res://Scripts/robot.gd" id="1_4pq5s"]
+[ext_resource type="Texture2D" uid="uid://bhgey8l1lxf7v" path="res://Assets/Sprites/robot/robommr-l1-sprites1.png" id="1_ift4y"]
+[ext_resource type="Texture2D" uid="uid://dhumh0nlrnt7i" path="res://Assets/Sprites/robot/robommr-l1-sprites2.png" id="2_jcosc"]
+[ext_resource type="Texture2D" uid="uid://bwau3iulq4nv6" path="res://Assets/Sprites/robot/robommr-l1-sprites3.png" id="3_q3cbv"]
+[ext_resource type="Texture2D" uid="uid://d0ujl3jkklbdr" path="res://Assets/Sprites/robot/robommr-l1-sprites4.png" id="4_oy7ok"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_2sm1r"]
+frames = 4
+speed_scale = 10.0
+frame_0/texture = ExtResource("1_ift4y")
+frame_1/texture = ExtResource("2_jcosc")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("3_q3cbv")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("4_oy7ok")
+frame_3/duration = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c5cu4"]
+
+[node name="Robot" type="Area2D"]
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_4pq5s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AnimatedTexture_2sm1r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_c5cu4")
