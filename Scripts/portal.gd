@@ -1,30 +1,32 @@
 extends Area2D
-
-var is_flashing = false
-var flash_timer_reset = 1
+@export var is_flashing = false
+@export var flash_timer_reset = 1
 var flash_timer = flash_timer_reset
 var flash_direction = 1
 var alpha = 0.05
 
-signal collectable_collected
-
 func _ready():
-	randomise_flash_start()
+	var game = get_node("/root/Game")
+	print("node:" + game.name)
+	game.all_collectables_collected.connect(_all_collectables_collected)
 	
-func randomise_flash_start():
-	await get_tree().create_timer(randf_range(0.3, 1.0)).timeout
-	print("flash")
-	is_flashing = true;
-func _on_body_entered(body):
-	collectable_collected.emit()
-	queue_free()
+	
+	
+
+	
+	
+func _all_collectables_collected():
+	print("Key Collected")
+	make_portal_flash()
+func make_portal_flash():
+	is_flashing = true
 
 func _process(delta):
-	flash_collectable()
-		
-func flash_collectable():
-	if !is_flashing:
-		return
+	
+	flash_portal()
+	
+func flash_portal():
+	if !is_flashing: return
 	if flash_direction > 0:
 		alpha = alpha + 0.01
 	if alpha > 1: 

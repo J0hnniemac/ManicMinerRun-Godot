@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bh1pdvuwniq0j"]
+
+[ext_resource type="Script" path="res://Scripts/portal.gd" id="1_2p0b4"]
+[ext_resource type="Texture2D" uid="uid://c1nsqnybspxag" path="res://Assets/SpriteSheets/mmr-l1-tiles.png" id="1_6bqmr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ws5s"]
+atlas = ExtResource("1_6bqmr")
+region = Rect2(2.08165e-12, 385, 256, 256)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x6tjv"]
+size = Vector2(254, 254)
+
+[node name="Portal" type="Area2D"]
+position = Vector2(2.08165e-12, 2.08165e-12)
+script = ExtResource("1_2p0b4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_4ws5s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-2.08165e-12, 0)
+shape = SubResource("RectangleShape2D_x6tjv")
