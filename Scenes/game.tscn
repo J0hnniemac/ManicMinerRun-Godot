@@ -8,7 +8,7 @@
 script = ExtResource("1_l2wvm")
 
 [node name="PlayerSpawnPoint" type="Marker2D" parent="."]
-position = Vector2(1533, 211)
+position = Vector2(89, 417)
 scale = Vector2(0.25, 0.25)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -20,9 +20,8 @@ offset_bottom = 40.0
 [node name="Level01" parent="." instance=ExtResource("3_ai4fo")]
 
 [node name="Robot" parent="." instance=ExtResource("3_reafa")]
-position = Vector2(3282, 159)
-direction = -1
+position = Vector2(2806, 159)
 move_distance = 320
 
 [node name="Robot2" parent="." instance=ExtResource("3_reafa")]
-position = Vector2(1653, 352)
+position = Vector2(1651, 352)

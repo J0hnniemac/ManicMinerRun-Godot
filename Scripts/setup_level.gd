@@ -6,6 +6,7 @@ var baddie1 = preload("res://Scenes/baddie_1.tscn")
 var baddie2 = preload("res://Scenes/baddie_2.tscn")
 var collectable1 = preload("res://Scenes/collect_1.tscn")
 var portal = preload("res://Scenes/portal.tscn")
+var sinky = preload("res://Scenes/sinky.tscn")
 
 var collectables = Node2D.new()
 
@@ -37,6 +38,8 @@ func replace_tiles_with_spite():
 				replace_tile_with_sprite_at(i,"collectable1")
 			if tile_type == "portal1":
 				replace_tile_with_sprite_at(i,"portal")
+			if tile_type == "sinkyfloor1":
+				replace_tile_with_sprite_at(i,"sinky")
 				
 		#print(i)
 	
@@ -66,7 +69,11 @@ func replace_tile_with_sprite_at(grid_position:Vector2i, baddie_id:String):
 		var instance = portal.instantiate()
 		instance.global_position = Vector2(world_position.x,world_position.y + 64)
 		add_child(instance)
-	
+	if baddie_id == "sinky":
+		print("sinky replaced")
+		var instance = sinky.instantiate()
+		instance.global_position = world_position
+		add_child(instance)
 
 	
 		
