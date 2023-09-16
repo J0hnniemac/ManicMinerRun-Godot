@@ -9,6 +9,8 @@ var end_x_global
 var speed = 140.0
 var time_to_move 
 
+
+
 func _ready():
 	#todo fix speed time = distance / speed
 	
@@ -27,7 +29,7 @@ func _ready():
 		
 		
 		
-	move_robot()
+	#move_robot()
 	
 	#start_moving(robot_max_world.x,robot_min_world.x)
 	

@@ -41,3 +41,12 @@ func flash_portal():
 	
 	var sprite2d = $Sprite2D
 	sprite2d.modulate = Color(1,1,1,alpha)
+	
+	
+	
+
+
+func _on_body_entered(body):
+	print("Reached Portal")
+	if is_flashing:
+		get_tree().change_scene_to_file("res://Scenes/start_menu.tscn")
