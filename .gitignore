@@ -4,4 +4,4 @@
 *.exe
 *.dmg
 *.pck
-
+.DS_Store
