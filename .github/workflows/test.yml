@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 env:
   ITCH_USER_NAME: johnmcmanus
-  ITCH_GAME_NAME: JumpingJackZXRemake
+  ITCH_GAME_NAME: manic-miner-run
   PROJECT_PATH: Platforms/DesktopGL
   
 jobs:
