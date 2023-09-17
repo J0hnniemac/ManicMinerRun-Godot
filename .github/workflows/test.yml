@@ -55,5 +55,5 @@ jobs:
         CHANNEL: windows
         ITCH_GAME: ${{ env.ITCH_GAME_NAME }}
         ITCH_USER: ${{ env.ITCH_USER_NAME }}
-        PACKAGE: ./build/Windows/ManicMinerRun.zip
+        PACKAGE: ${HOME}/.local/share/godot/archives/ManicMinerRun.zip
         VERSION: ${{ env.TAGVERSION }}
