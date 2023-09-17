@@ -1,7 +1,11 @@
 
 on: 
   workflow_dispatch:
-
+env:
+  ITCH_USER_NAME: johnmcmanus
+  ITCH_GAME_NAME: JumpingJackZXRemake
+  PROJECT_PATH: Platforms/DesktopGL
+  
 jobs:
   # job id, can be anything
   export_game:
@@ -37,3 +41,30 @@ jobs:
         generateReleaseNotes: true
         tag: ${{ github.ref_name }}
         artifacts: ${{ steps.export.outputs.archive_directory }}/*
+    - name: Publish Windows build to itch.io
+      uses: josephbmanley/butler-publish-itchio-action@master
+      env:
+        BUTLER_CREDENTIALS: ${{ secrets.BUTLER_API_KEY }}
+        CHANNEL: windows
+        ITCH_GAME: ${{ env.ITCH_GAME_NAME }}
+        ITCH_USER: ${{ env.ITCH_USER_NAME }}
+        PACKAGE: artifacts/windows
+        VERSION: ${{ env.TAGVERSION }}
+    - name: Publish OSX builds to itch.io
+      uses: josephbmanley/butler-publish-itchio-action@master
+      env:
+        BUTLER_CREDENTIALS: ${{ secrets.BUTLER_API_KEY }}
+        CHANNEL: osx
+        ITCH_GAME: ${{ env.ITCH_GAME_NAME }}
+        ITCH_USER: ${{ env.ITCH_USER_NAME }}
+        PACKAGE: artifacts/osx
+        VERSION: ${{ env.TAGVERSION }}
+    - name: Publish Linux build to itch.io
+      uses: josephbmanley/butler-publish-itchio-action@master
+      env:
+        BUTLER_CREDENTIALS: ${{ secrets.BUTLER_API_KEY }}
+        CHANNEL: linux
+        ITCH_GAME: ${{ env.ITCH_GAME_NAME }}
+        ITCH_USER: ${{ env.ITCH_USER_NAME }}
+        PACKAGE: artifacts/linux
+        VERSION: ${{ env.TAGVERSION }}
