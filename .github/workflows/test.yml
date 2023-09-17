@@ -4,7 +4,6 @@ on:
 env:
   ITCH_USER_NAME: johnmcmanus
   ITCH_GAME_NAME: manic-miner-run
-  PROJECT_PATH: Platforms/DesktopGL
   
 jobs:
   # job id, can be anything
@@ -40,7 +39,11 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         generateReleaseNotes: true
         tag: ${{ github.ref_name }}
-        artifacts: ${{ steps.export.outputs.archive_directory }}/*
+        artifacts: artifacts/*
+    - name: Check Artifacts
+      run: |
+        ls artifacts
+        ls ./
     - name: Publish Windows build to itch.io
       uses: josephbmanley/butler-publish-itchio-action@master
       env:
