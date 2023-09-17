@@ -46,7 +46,8 @@ jobs:
         tag: ${{ github.event.inputs.tag }}
     - name: Check Artifacts
       run: |
-        ls ./build
+        echo "${HOME}/.local/share"
+        ls ${HOME}/.local/share/godot
     - name: Publish Windows build to itch.io
       uses: josephbmanley/butler-publish-itchio-action@master
       env:
