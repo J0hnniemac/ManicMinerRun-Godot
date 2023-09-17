@@ -42,7 +42,6 @@ jobs:
         artifacts: artifacts/*
     - name: Check Artifacts
       run: |
-        ls artifacts
         ls ./
     - name: Publish Windows build to itch.io
       uses: josephbmanley/butler-publish-itchio-action@master
