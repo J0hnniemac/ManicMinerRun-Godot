@@ -38,7 +38,7 @@ jobs:
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         generateReleaseNotes: true
-        tag: ${{ github.ref_name }}
+        tag: tagme
         artifacts: artifacts/*
     - name: Check Artifacts
       run: |
