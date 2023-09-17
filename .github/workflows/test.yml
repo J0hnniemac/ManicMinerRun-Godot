@@ -33,7 +33,7 @@ jobs:
         # Defining all the required inputs
         godot_executable_download_url: https://downloads.tuxfamily.org/godotengine/4.0/Godot_v4.0-stable_linux.x86_64.zip
         godot_export_templates_download_url: https://downloads.tuxfamily.org/godotengine/4.0/Godot_v4.0-stable_export_templates.tpz
-        relative_project_path: ./
+        relative_project_path: $GITHUB_WORKSPACE
         archive_output: true
 
       # This release action has worked well for me. However, you can most likely use any release action of your choosing.
@@ -42,13 +42,11 @@ jobs:
       uses: ncipollo/release-action@v1.12.0
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        generateReleaseNotes: true
+        generateReleaseNotes: false
         tag: ${{ github.event.inputs.tag }}
-        artifacts: archives/*
     - name: Check Artifacts
       run: |
-        ls ./build/Windows
-        ls ./build/MacOS
+        ls $GITHUB_WORKSPACE
     - name: Publish Windows build to itch.io
       uses: josephbmanley/butler-publish-itchio-action@master
       env:
@@ -57,22 +55,4 @@ jobs:
         ITCH_GAME: ${{ env.ITCH_GAME_NAME }}
         ITCH_USER: ${{ env.ITCH_USER_NAME }}
         PACKAGE: ./build/Windows/ManicMinerRun.zip
-        VERSION: ${{ env.TAGVERSION }}
-    - name: Publish OSX builds to itch.io
-      uses: josephbmanley/butler-publish-itchio-action@master
-      env:
-        BUTLER_CREDENTIALS: ${{ secrets.BUTLER_API_KEY }}
-        CHANNEL: osx
-        ITCH_GAME: ${{ env.ITCH_GAME_NAME }}
-        ITCH_USER: ${{ env.ITCH_USER_NAME }}
-        PACKAGE: ./build/MacOS/ManicMinerRun.zip
-        VERSION: ${{ env.TAGVERSION }}
-    - name: Publish Linux build to itch.io
-      uses: josephbmanley/butler-publish-itchio-action@master
-      env:
-        BUTLER_CREDENTIALS: ${{ secrets.BUTLER_API_KEY }}
-        CHANNEL: linux
-        ITCH_GAME: ${{ env.ITCH_GAME_NAME }}
-        ITCH_USER: ${{ env.ITCH_USER_NAME }}
-        PACKAGE: artifacts/linux
         VERSION: ${{ env.TAGVERSION }}
