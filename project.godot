@@ -21,8 +21,10 @@ GameManager="*res://Scenes/game_manager.tscn"
 
 [display]
 
-window/size/viewport_width=1920
-window/size/viewport_height=1080
+window/size/viewport_width=960
+window/size/viewport_height=540
+window/stretch/mode="viewport"
+window/stretch/scale=0.5
 
 [layer_names]
 
@@ -39,4 +41,5 @@ window/size/viewport_height=1080
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)

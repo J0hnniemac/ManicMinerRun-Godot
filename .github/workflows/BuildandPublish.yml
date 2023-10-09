@@ -1,0 +1,63 @@
+name: Build and Publish Manic Miner Run - multi platform
+on: 
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag for operation'     
+        required: true
+        default: 'latest'
+env:
+  ITCH_USER_NAME: johnmcmanus
+  ITCH_GAME_NAME: manic-miner-run
+  BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }} 
+  
+jobs:
+  # job id, can be anything
+  export_game:
+    # Always use ubuntu-latest for this action
+    runs-on: ubuntu-latest
+    # Add permission for release creation. Can be made narrower according to your needs
+    permissions: write-all
+    # Job name, can be anything
+    name: Export Game
+    steps:
+      # Always include the checkout step so that 
+      # your project is available for Godot to export
+    - name: checkout
+      uses: actions/checkout@v3.3.0
+  
+    - name: export game
+      id: export
+      # Use latest version (see releases for all versions)
+      uses: firebelley/godot-export@v5.2.1
+      with:
+        # Defining all the required inputs
+        godot_executable_download_url: https://downloads.tuxfamily.org/godotengine/4.1.1/Godot_v4.1.1-stable_linux.x86_64.zip
+        godot_export_templates_download_url: https://downloads.tuxfamily.org/godotengine/4.1.1/Godot_v4.1.1-stable_export_templates.tpz
+        relative_project_path: ./
+        archive_output: true
+
+      # This release action has worked well for me. However, you can most likely use any release action of your choosing.
+      # https://github.com/ncipollo/release-action
+    - name: Check Artifacts
+      run: |
+        ls -R /home/runner/.local/share/godot/archives
+    - name: Set up butler
+      uses: jdno/setup-butler@v1.3.0
+    - name: Print butler version
+      run: butler -V  
+    - name: butler login
+      run: butler login
+    - name: Publish to Itch.io Windows
+      run: butler push /home/runner/.local/share/godot/archives/ManicMinerRun-Windows.zip johnmcmanus/manic-miner-run:windows
+#    - name: butler push MacOS
+#      run: butler push /home/runner/.local/share/godot/archives/ManicMinerRun-macOS.zip johnmcmanus/manic-miner-run:macos
+    - name: Publish to Itch.io Linux
+      run: butler push /home/runner/.local/share/godot/archives/ManicMinerRun-Linux-X11.zip johnmcmanus/manic-miner-run:linux
+    - name: Publish to Itch.io Web
+      run: butler push /home/runner/.local/share/godot/archives/ManicMinerRun-Web.zip johnmcmanus/manic-miner-run:web
+    - name: Publish to Itch.io HTML5
+      run: butler push /home/runner/.local/share/godot/archives/ManicMinerRun-Web.zip johnmcmanus/manic-miner-run:HTML5
+
+
+            

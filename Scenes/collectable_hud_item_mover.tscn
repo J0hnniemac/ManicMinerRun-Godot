@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwrpgy3fkda8y"]
+
+[ext_resource type="Texture2D" uid="uid://cae01w42agyj7" path="res://Assets/Sprites/key.png" id="1_owqnm"]
+[ext_resource type="Script" path="res://Scripts/collectable_hud_item_mover.gd" id="2_lsjh1"]
+
+[node name="CollectableHUDItemMover" type="Sprite2D"]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_owqnm")
+script = ExtResource("2_lsjh1")

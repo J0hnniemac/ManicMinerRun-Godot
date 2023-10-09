@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://n1ohod7v7pk8"]
+
+[ext_resource type="Script" path="res://Scripts/hud.gd" id="1_5rpjm"]
+[ext_resource type="FontFile" uid="uid://5d1spnit1cod" path="res://Assets/Fonts/zx-spectrum.ttf" id="1_mvgpj"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_5rpjm")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 244.0
+offset_bottom = 24.0
+
+[node name="Label" type="Label" parent="."]
+offset_right = 43.0
+offset_bottom = 26.0
+theme_override_fonts/font = ExtResource("1_mvgpj")
+theme_override_font_sizes/font_size = 36
+text = "Score"
+
+[node name="Score" type="Label" parent="."]
+offset_left = 217.0
+offset_right = 877.0
+offset_bottom = 113.0
+theme_override_fonts/font = ExtResource("1_mvgpj")
+theme_override_font_sizes/font_size = 36
+text = "000000"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 28.0
+offset_top = 65.0
+offset_right = 468.0
+offset_bottom = 178.0
+theme_override_fonts/font = ExtResource("1_mvgpj")
+theme_override_font_sizes/font_size = 36
+text = "High"
+
+[node name="HighScore" type="Label" parent="."]
+offset_left = 217.0
+offset_top = 65.0
+offset_right = 877.0
+offset_bottom = 178.0
+theme_override_fonts/font = ExtResource("1_mvgpj")
+theme_override_font_sizes/font_size = 36
+text = "000000"
+
+[node name="WillyLivesHolder" type="Node2D" parent="."]
+position = Vector2(502, 0)
+
+[node name="CollectablesHolder" type="Node2D" parent="."]

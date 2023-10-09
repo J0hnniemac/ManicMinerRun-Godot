@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dlcqpoa0yl62j"]
+
+[node name="BuildInfo" type="CanvasLayer"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 107.0
+offset_bottom = 26.0
+text = "Alpha Version"

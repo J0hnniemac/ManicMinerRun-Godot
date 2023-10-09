@@ -1,27 +1,37 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3xrni43rjfsr"]
+[gd_scene load_steps=8 format=3 uid="uid://d3xrni43rjfsr"]
 
 [ext_resource type="Script" path="res://Scripts/game.gd" id="1_l2wvm"]
-[ext_resource type="PackedScene" uid="uid://c8mex3fk5hnh7" path="res://Scenes/level_01.tscn" id="3_ai4fo"]
-[ext_resource type="PackedScene" uid="uid://dmu152y70kma7" path="res://Scenes/robot.tscn" id="3_reafa"]
+[ext_resource type="AudioStream" uid="uid://c33mjjilccjm5" path="res://Assets/Sounds/mmbg2.wav" id="2_r80x3"]
+[ext_resource type="PackedScene" uid="uid://dlcqpoa0yl62j" path="res://Scenes/build_info.tscn" id="4_awhet"]
+[ext_resource type="PackedScene" uid="uid://n1ohod7v7pk8" path="res://Scenes/hud.tscn" id="5_bxheh"]
+[ext_resource type="AudioStream" uid="uid://b7dpld60mokre" path="res://Assets/Sounds/willykill.wav" id="7_2b7y3"]
+[ext_resource type="AudioStream" uid="uid://bw3jd67wa7q3i" path="res://Assets/Sounds/willJump2.wav" id="8_omjbk"]
+[ext_resource type="AudioStream" uid="uid://ownliqb53dg4" path="res://Assets/Sounds/willyFall.wav" id="9_7yw0e"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_l2wvm")
 
-[node name="PlayerSpawnPoint" type="Marker2D" parent="."]
-position = Vector2(89, 417)
-scale = Vector2(0.25, 0.25)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="BuildInfo" parent="CanvasLayer" instance=ExtResource("4_awhet")]
 
-[node name="Level01" parent="." instance=ExtResource("3_ai4fo")]
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("5_bxheh")]
+offset = Vector2(10, 950)
+transform = Transform2D(1, 0, 0, 1, 10, 950)
 
-[node name="Robot" parent="." instance=ExtResource("3_reafa")]
-position = Vector2(2806, 159)
-move_distance = 320
+[node name="BGTtune" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_r80x3")
+volume_db = -23.892
+autoplay = true
 
-[node name="Robot2" parent="." instance=ExtResource("3_reafa")]
-position = Vector2(1651, 352)
+[node name="WillyDied" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_2b7y3")
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_omjbk")
+
+[node name="FallSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_7yw0e")
+
+[node name="FallSound2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_7yw0e")

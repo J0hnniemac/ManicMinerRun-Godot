@@ -21,7 +21,7 @@ func _all_collectables_collected():
 func make_portal_flash():
 	is_flashing = true
 
-func _process(delta):
+func _process(_delta):
 	
 	flash_portal()
 	
@@ -46,7 +46,7 @@ func flash_portal():
 	
 
 
-func _on_body_entered(body):
+func _on_body_entered(_body):
 	print("Reached Portal")
 	if is_flashing:
 		get_tree().change_scene_to_file("res://Scenes/start_menu.tscn")

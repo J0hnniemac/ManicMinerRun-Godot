@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://b386xo7tj80gk"]
+
+[ext_resource type="Texture2D" uid="uid://ckbb0casdx0n6" path="res://Assets/Sprites/willywalk.png" id="1_1g7lf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yg04f"]
+atlas = ExtResource("1_1g7lf")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovjlv"]
+atlas = ExtResource("1_1g7lf")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sf760"]
+atlas = ExtResource("1_1g7lf")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j2qfg"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"idle1",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle2",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yg04f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovjlv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sf760")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 3.0
+}]
+
+[node name="WillyLife" type="AnimatedSprite2D"]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_j2qfg")
+animation = &"walk"
+autoplay = "walk"
+frame_progress = 0.585808

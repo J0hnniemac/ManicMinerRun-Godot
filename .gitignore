@@ -1,2 +1,9 @@
 # Godot 4+ specific ignores
 .godot/
+*.zip
+*.exe
+*.dmg
+*.pck
+**/.DS_Store
+build/
+.DS_Store

@@ -6,20 +6,21 @@ var flash_timer = flash_timer_reset
 var flash_direction = 1
 var alpha = 0.05
 
-signal collectable_collected
+signal collectable_collected(tran)
 
 func _ready():
 	randomise_flash_start()
 	
 func randomise_flash_start():
 	await get_tree().create_timer(randf_range(0.3, 1.0)).timeout
-	print("flash")
 	is_flashing = true;
-func _on_body_entered(body):
-	collectable_collected.emit()
+func _on_body_entered(_body):
+	print("s:" + str(to_global($Sprite2D.position)))
+	collectable_collected.emit($Sprite2D.get_global_transform())
+
 	queue_free()
 
-func _process(delta):
+func _process(_delta):
 	flash_collectable()
 		
 func flash_collectable():

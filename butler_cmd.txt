@@ -1,0 +1,1 @@
+butler push build/macOS/ManicMinerRun-macos.dmg johnmcmanus/manic-miner-run:macos
